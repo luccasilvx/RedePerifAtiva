@@ -1,8 +1,5 @@
 <section class="relative h-screen flex items-center bg-gray-50 overflow-hidden">
 
-  <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-blue rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-pulse"></div>
-  <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-pink rounded-full mix-blend-multiply filter blur-[128px] opacity-20"></div>
-
   <div class="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
 
     <div class="text-left">
@@ -28,23 +25,41 @@
     </div>
 
     <div class="hidden md:block relative">
-  <div class="w-full h-[500px] rounded-2xl border-4 border-brand-green/30 relative overflow-hidden group shadow-2xl">
+      <div class="w-full h-[500px] rounded-2xl border-4 border-brand-green/30 relative overflow-hidden group shadow-2xl">
 
-    <img
-      src="assets/imagemDroneAcima.JPG"
-      alt="Ação da Rede PerifAtiva no Curió"
-      class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-    >
+        @for (img of images; track $index) {
+          <img
+            [src]="img"
+            alt="Carrossel Rede PerifAtiva"
+            class="absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out"
+            [class.opacity-100]="currentIndex === $index"
+            [class.opacity-0]="currentIndex !== $index"
+            [class.scale-110]="currentIndex === $index"
+            [class.scale-100]="currentIndex !== $index"
+          >
+        }
 
-    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent opacity-80 z-10"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/40 to-transparent opacity-80 z-10 pointer-events-none"></div>
 
-    <div class="absolute bottom-8 left-8 z-20">
-      <p class="font-display text-white text-3xl drop-shadow-md">Desde 2021</p>
-      <p class="text-gray-200 font-light tracking-wide">Transformando o Curió</p>
+        <div class="absolute bottom-8 left-8 z-20">
+          <p class="font-display text-white text-3xl drop-shadow-md">Desde 2021</p>
+          <p class="text-gray-200 font-light tracking-wide">Transformando o Curió</p>
+        </div>
+
+        <div class="absolute bottom-4 right-8 z-30 flex space-x-2">
+        @for (img of images; track $index) {
+          <button
+            (click)="currentIndex = $index"
+            class="w-3 h-3 rounded-full transition-all duration-300"
+            [ngClass]="currentIndex === $index ? 'bg-brand-orange' : 'bg-white/50'">
+          </button>
+        }
+        </div>
+
+      </div>
+
+      <div class="absolute -z-10 top-4 -right-4 w-full h-full border-2 border-brand-orange/30 rounded-2xl"></div>
     </div>
-  </div>
-  <div class="absolute -z-10 top-4 -right-4 w-full h-full border-2 border-brand-orange/30 rounded-2xl"></div>
-</div>
   </div>
 </section>
 
