@@ -1,25 +1,30 @@
-<section class="relative h-screen flex items-center bg-gray-50 overflow-hidden">
+<section class="relative h-screen flex items-center bg-gray-100 overflow-hidden">
 
   <div class="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
 
     <div class="text-left">
-      <h1 class="font-display text-5xl md:text-7xl text-black leading-tight mb-6">
-        Potencializando <br/>
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-brand-blue">
-          Periferias
+      <h3 class="font-display text-5xl md:text-6xl text-black leading-tight mb-6">
+        Empoderando a
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-green leading-snug pb-2">
+          Periferia
         </span>
-      </h1>
+        <br/>
+        e a
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-700 leading-snug pb-2">
+          Juventude.
+        </span>
+      </h3>
 
-      <p class="font-sans text-gray-800 text-lg md:text-xl mb-8 leading-relaxed max-w-lg">
-        A luta só se fortifica na coletividade. Construindo oportunidades, sustentabilidade e sonhos no Curió e além.
+      <p class="font-sans text-gray-800 text-base md:text-base mb-8 leading-relaxed max-w-lg">
+        Fundada em 2021 no bairro Curió, a Rede PerifAtiva nasceu da união de jovens que decidiram transformar suas lutas individuais em força coletiva. Nosso objetivo é construir oportunidades e perspectivas reais para aqueles que, muitas vezes, são invisibilizados pelo Estado e pelo terceiro setor tradicional.
       </p>
 
       <div class="flex flex-col sm:flex-row gap-4">
-        <button class="px-8 py-4 bg-brand-orange text-white font-bold rounded-full hover:bg-orange-600 transition shadow-lg hover:shadow-orange-500/30">
-          Junte-se à Rede
+        <button [routerLink]="['/voluntary']" class="px-8 py-4 bg-brand-orange text-white font-bold rounded-full hover:bg-orange-600 transition shadow-lg hover:shadow-orange-500/30">
+          Apoie a Causa
         </button>
         <button class="px-8 py-4 border-2 border-brand-blue text-brand-blue font-bold rounded-full hover:bg-brand-blue hover:text-white transition">
-          Conheça a História
+          Conheça nossas Açoẽs
         </button>
       </div>
     </div>
@@ -63,19 +68,19 @@
   </div>
 </section>
 
-<section id="quem-somos" class="py-20 bg-white">
+<section id="quem-somos" class="py-20 bg-gray-50">
   <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
     <div class="order-2 md:order-1 relative">
       <div class="absolute -top-4 -left-4 w-24 h-24 bg-brand-green rounded-full opacity-20"></div>
       <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-brand-orange rounded-full opacity-20"></div>
       <div class="w-full h-96 bg-gray-200 rounded-2xl overflow-hidden shadow-xl border-b-8 border-brand-green">
-        <img src="assets/logoRedePerifAtiva.svg" alt="Equipe Rede PerifAtiva" class="w-full h-full object-cover transform hover:scale-105 transition duration-500">
+        <img src="assets/PerifAtiva/COP30eCúpulaDosPovos/cupula.jpg" alt="Equipe Rede PerifAtiva" class="w-full h-full object-cover transform hover:scale-105 transition duration-500">
       </div>
     </div>
 
     <div class="order-1 md:order-2">
-      <h4 class="text-brand-orange font-bold uppercase tracking-widest mb-2 font-sans">Nossa História</h4>
-      <h2 class="font-display text-4xl text-brand-dark mb-6">Do Curió para o <span class="text-brand-blue">Mundo</span></h2>
+      <img src="assets/PerifAtiva/logos/LogoPretaBranco.svg" alt="Logo Rede PerifAtiva" class="h-10 pb-4 w-auto">
+      <h2 class="font-display text-3xl text-brand-dark mb-6">Não prevemos o amanhã, nós <span class="text-brand-blue">potencializamos o hoje</span> transformando vivências do Curió em impacto global.</h2>
 
       <div class="prose text-gray-600 font-sans leading-relaxed">
         <p class="mb-4">
@@ -87,7 +92,7 @@
       </div>
 
       <a href="#voluntario" class="inline-block mt-6 border-b-2 border-brand-red text-brand-red font-bold hover:text-red-700 transition">
-        Conheça nossos projetos →
+        Saiba mais sobre nós →
       </a>
     </div>
   </div>

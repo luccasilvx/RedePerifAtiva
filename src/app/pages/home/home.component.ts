@@ -1,10 +1,11 @@
 import { Component, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -13,9 +14,10 @@ export class HomeComponent implements OnInit, OnDestroy{
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   images: string [] = [
-    'assets/imagemDroneAcima.JPG',
-    'assets/logoRedePerifAtiva.svg',
-    'assets/novaLogo.svg',
+    'assets/PerifAtiva/IMG_5348.JPG',
+    'assets/PerifAtiva/imob.jpg',
+    'assets/PerifAtiva/IMG_5346.JPG'
+
   ];
 
   currentIndex = 0;
