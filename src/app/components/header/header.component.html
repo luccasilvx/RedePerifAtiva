@@ -8,10 +8,10 @@
     </a>
 
     <nav class="hidden md:flex space-x-8 items-center">
-      <a href="#quem-somos" class="text-white font-sans font-bold hover:text-brand-blue transition">Quem Somos</a>
-      <a href="#quem-somos" class="text-white font-sans font-bold hover:text-brand-blue transition">Ações</a>
-      <a href="#parceiros" class="text-white font-sans font-bold hover:text-brand-blue transition">Crônicas</a>
-      <a href="#parceiros" class="text-white font-sans font-bold hover:text-brand-blue transition">Voluntários</a>
+      <a [routerLink]="['/quem-somos']" class="text-white font-sans font-bold hover:text-brand-blue transition">Quem Somos</a>
+      <a [routerLink]="['/actions']" class="text-white font-sans font-bold hover:text-brand-blue transition">Ações</a>
+      <a [routerLink]="['/cronics']" class="text-white font-sans font-bold hover:text-brand-blue transition">Crônicas</a>
+      <a [routerLink]="['/voluntaries']" class="text-white font-sans font-bold hover:text-brand-blue transition">Voluntários</a>
 
       <a [routerLink]="['/voluntary']" class="bg-white text-brand-orange hover:bg-gray-100 px-6 py-2 rounded-xl font-bold transition shadow-md transform hover:scale-105">
         Seja Voluntário
